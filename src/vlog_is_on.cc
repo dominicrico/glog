@@ -49,7 +49,7 @@
 
 using std::string;
 
-GLOG_DEFINE_int32(v, 0, "Show all VLOG(m) messages for m <= this."
+GLOG_DEFINE_int32(v2, 0, "Show all VLOG(m) messages for m <= this."
 " Overridable by --vmodule.");
 
 GLOG_DEFINE_string(vmodule, "", "per-module verbose level."
@@ -136,7 +136,7 @@ static void VLOG2Initializer() {
   // Can now parse --vmodule flag and initialize mapping of module-specific
   // logging levels.
   inited_vmodule = false;
-  const char* vmodule = FLAGS_vmodule.c_str();
+  const char* vmodule = FLAGS_vmodule2.c_str();
   const char* sep;
   VModuleInfo* head = NULL;
   VModuleInfo* tail = NULL;
